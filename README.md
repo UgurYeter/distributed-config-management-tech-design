@@ -144,7 +144,7 @@ AMQP and Kafka broker implementations are supported by Spring Cloud Bus to trans
 3.  Spring Cloud Config Server broadcasts the change via Spring Cloud Bus.
 4.  Spring Cloud Config Clients are notified about the changing config and they refresh their config value at runtime.
 
-![img](sources/spring-config-server-bus.png)
+![img](./docs/sources/spring-config-server-bus.png)
 
 1.  Pros
 
@@ -210,7 +210,7 @@ API Gateway can forward requests to the related service only after placing a uni
 As the last destination for the HTTP request, the destination service is able to decide whether the user who sends the request is eligible for the feature or not by using **user id** in *X-User-Id* HTTP header and
 checking application configuration (which is managed by Spring Cloud Config) for the user.
 
-![img](sources/limiting-feature-for-some-users.png)
+![img](./docs/sources/limiting-feature-for-some-users.png)
 
 
 <a id="orgdd36ee1"></a>
@@ -226,7 +226,7 @@ For this requirement, there are 2 possible interpretations.
     -   Assuming AWS is configured to include IP information to HTTP requests by adding [X-Forwarded-For](https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/x-forwarded-headers.html%20%20%20%20) HTTP header, the origin country of the request could be found from the IP address information.
     -   The system later can identify the origin country of the request by using an [IP geo location API](https://www.abstractapi.com/api/ip-geolocation-api%20%20%20%20).
 
-![img](sources/limiting-feature-for-some-countries.png)
+![img](./docs/sources/limiting-feature-for-some-countries.png)
 
 
 <a id="org6433b8c"></a>
